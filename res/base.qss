@@ -1,3 +1,31 @@
+QWidget#centralwidget{
+    background-color: #0f1319;
+    color: #fff;
+    border-radius: 10px;
+    border-color: #1bd96a;
+    border-width: 2px;
+    border-style: solid;
+}
+
+QWidget#titlebar{
+    background-color: #1bd96a;
+    color: black;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+QWidget#titlebar QPushButton{
+    background-color: transparent;
+    color: black;
+    border-top-right-radius: 10px;
+}
+
+QWidget#titlebar QPushButton:hover{
+    background-color: #fa4242;
+    color: white;
+}
+
+
 QMainWindow {
     background-color: #0f1319;
     color: #fff;

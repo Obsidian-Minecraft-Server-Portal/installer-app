@@ -2,16 +2,50 @@
 #include "ui_InstallerWindow.h"
 #include <QFile>
 #include <QFontDatabase>
+#include <QMouseEvent>
 
 namespace ObsidianInstaller {
     InstallerWindow::InstallerWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::InstallerWindow) {
+#ifdef Q_OS_WIN
+        setWindowFlags(Qt::FramelessWindowHint);
+        setAttribute(Qt::WA_TranslucentBackground);
+#endif
         ui->setupUi(this);
         loadStyleSheet();
         loadFonts();
+#ifdef Q_OS_WIN
+        connect(ui->closeButton, &QPushButton::clicked, this, &InstallerWindow::close);
+#endif
     }
 
     InstallerWindow::~InstallerWindow() {
         delete ui;
+    }
+
+    void InstallerWindow::mousePressEvent(QMouseEvent *event) {
+        QMainWindow::mousePressEvent(event);
+        if (event->button() == Qt::LeftButton && ui->titlebar->underMouse()) {
+            isDragging = true;
+            dragPosition = event->globalPosition().toPoint() - frameGeometry().topLeft();
+            event->accept();
+        }
+    }
+
+    void InstallerWindow::mouseMoveEvent(QMouseEvent *event) {
+        QMainWindow::mouseMoveEvent(event);
+
+        if (isDragging && event->buttons() & Qt::LeftButton) {
+            move(event->globalPosition().toPoint() - dragPosition);
+            event->accept();
+        }
+    }
+
+    void InstallerWindow::mouseReleaseEvent(QMouseEvent *event) {
+        QMainWindow::mouseReleaseEvent(event);
+        if (event->button() == Qt::LeftButton) {
+            isDragging = false;
+            event->accept();
+        }
     }
 
     void InstallerWindow::loadStyleSheet() {
@@ -27,5 +61,4 @@ namespace ObsidianInstaller {
         QFontDatabase::addApplicationFont(":/fonts/Minecraft-Tenv2.ttf");
         QFontDatabase::addApplicationFont(":/fonts/Minecraft-Seven_v2.ttf");
     }
-
 } // ObsidianInstaller

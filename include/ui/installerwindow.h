@@ -19,14 +19,19 @@ namespace ObsidianInstaller {
 
     public:
         explicit InstallerWindow(QWidget *parent = nullptr);
-
         ~InstallerWindow() override;
 
+    protected:
+        void mousePressEvent(QMouseEvent *event) override;
+        void mouseMoveEvent(QMouseEvent *event) override;
+        void mouseReleaseEvent(QMouseEvent *event) override;
+
     private:
+        bool isDragging = false;
+        QPoint dragPosition;
         Ui::InstallerWindow *ui;
         void loadStyleSheet();
         static void loadFonts();
-        HRESULT UpdateWindows11RoundCorners();
     };
 } // ObsidianInstaller
 

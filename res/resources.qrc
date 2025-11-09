@@ -5,6 +5,8 @@
   <qresource prefix="images">
     <file>icon.png</file>
     <file>icon.ico</file>
+    <file>checkbox-checked.svg</file>
+    <file>checkbox-checked-hover.svg</file>
   </qresource>
   <qresource prefix="fonts">
     <file>Minecraft-Tenv2.ttf</file>

@@ -39,6 +39,14 @@ QPushButton[isPrimary=true]:hover{
     background-color: #23E574;
 }
 
+QPushButton[isPrimary=true]:disabled{
+    background-color: #165932;
+}
+QPushButton[isPrimary=false]:disabled{
+    background-color: #0e0e0f;
+    color: #8a8a8a;
+}
+
 QPushButton{
     background-color: #1a1a1d;
     color: #fff;
@@ -48,4 +56,105 @@ QPushButton{
 
 QPushButton:hover{
     background-color: #252528;
+}
+
+/* QTextBrowser Selection */
+QTextBrowser {
+    selection-background-color: #1bd96a;
+    selection-color: #000;
+}
+
+/* QCheckBox */
+QCheckBox {
+    color: #fff;
+    spacing: 8px;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #1bd96a;
+    border-radius: 0;
+    background-color: #1a1a1d;
+}
+
+QCheckBox::indicator:hover {
+    border-color: #23E574;
+    background-color: #252528;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #1a1a1d;
+    border-color: #1bd96a;
+    image: url(:/images/checkbox-checked.svg);
+}
+
+QCheckBox::indicator:checked:hover {
+    background-color: #252528;
+    border-color: #23E574;
+    image: url(:/images/checkbox-checked-hover.svg);
+}
+
+/* Vertical Scrollbar */
+QTextBrowser QScrollBar:vertical {
+    background-color: #1a1a1d;
+    width: 5px;
+    border-radius: 0px;
+}
+
+QTextBrowser QScrollBar::handle:vertical {
+    background-color: #1bd96a;
+    border-radius: 0px;
+    min-height: 20px;
+}
+
+QTextBrowser QScrollBar::handle:vertical:hover {
+    background-color: #23E574;
+}
+
+QTextBrowser QScrollBar::add-line:vertical,
+QTextBrowser QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QTextBrowser QScrollBar::add-page:vertical,
+QTextBrowser QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+/* Horizontal Scrollbar (if needed) */
+QTextBrowser QScrollBar:horizontal {
+    background-color: #1a1a1d;
+    height: 5px;
+    border-radius: 0px;
+}
+
+QTextBrowser QScrollBar::handle:horizontal {
+    background-color: #1bd96a;
+    border-radius: 0px;
+    min-width: 20px;
+}
+
+QTextBrowser QScrollBar::handle:horizontal:hover {
+    background-color: #23E574;
+}
+
+QTextBrowser QScrollBar::add-line:horizontal,
+QTextBrowser QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+QTextBrowser QScrollBar::add-page:horizontal,
+QTextBrowser QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+QTextEdit{
+    border-radius: 0;
+    background-color: #1d2127;
+    border-bottom-width: 0;
+    padding-top: 10px;
+    padding-left: 10px;
+    selection-background-color: #1bd96a;
+    selection-color: #000;
 }

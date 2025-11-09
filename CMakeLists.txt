@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 4.0)
 project(obsidian_installer)
 include(cmake/QtStaticHelpers.cmake)
+include(cmake/vendors.cmake)
 
 set(CMAKE_CXX_STANDARD 26)
 
@@ -48,4 +49,7 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
 configure_qt_static_target(${CMAKE_PROJECT_NAME}
         Widgets
         Gui
+        Network
 )
+
+install_dependencies()

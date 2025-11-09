@@ -20,6 +20,10 @@ namespace ObsidianInstaller {
     public:
         explicit InstallerWindow(QWidget *parent = nullptr);
         ~InstallerWindow() override;
+        void setPage(int index) const;
+        int getPage() const;
+        void incrementPage() const;
+        void decrementPage() const;
 
     protected:
         void mousePressEvent(QMouseEvent *event) override;

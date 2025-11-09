@@ -3,6 +3,7 @@
 #include <QFile>
 #include <QFontDatabase>
 #include <QMouseEvent>
+#include <QMessageBox>
 
 namespace ObsidianInstaller {
     InstallerWindow::InstallerWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::InstallerWindow) {
@@ -16,10 +17,42 @@ namespace ObsidianInstaller {
 #ifdef Q_OS_WIN
         connect(ui->closeButton, &QPushButton::clicked, this, &InstallerWindow::close);
 #endif
+        setPage(0);
     }
 
     InstallerWindow::~InstallerWindow() {
         delete ui;
+    }
+
+    void InstallerWindow::setPage(const int index) const {
+        ui->stackedWidget->setCurrentIndex(index);
+    }
+
+    int InstallerWindow::getPage() const {
+        if (!ui) {
+            qDebug() << "UI is null";
+            return 0;
+        }
+        if (!ui->stackedWidget) {
+            qDebug() << "Stacked widget is null";
+            return 0;
+        }
+
+        if (ui->stackedWidget->currentIndex() < 0) {
+            qDebug() << "Current index is less than 0";
+            return 0;
+        }
+
+        return ui->stackedWidget->currentIndex();
+    }
+
+    void InstallerWindow::incrementPage() const {
+        setPage(getPage() + 1);
+    }
+
+
+    void InstallerWindow::decrementPage() const {
+        setPage(getPage() - 1);
     }
 
     void InstallerWindow::mousePressEvent(QMouseEvent *event) {

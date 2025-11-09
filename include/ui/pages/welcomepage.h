@@ -2,8 +2,7 @@
 
 #ifndef OBISIAN_INSTALLER_WELCOMEPAGE_H
 #define OBISIAN_INSTALLER_WELCOMEPAGE_H
-
-#include <QWidget>
+#include <ui_WelcomePage.h>
 
 namespace ObsidianInstaller {
     QT_BEGIN_NAMESPACE
@@ -14,7 +13,7 @@ namespace ObsidianInstaller {
 
     QT_END_NAMESPACE
 
-    class WelcomePage : public QWidget {
+    class WelcomePage final : public QWidget {
         Q_OBJECT
 
     public:
@@ -24,6 +23,7 @@ namespace ObsidianInstaller {
 
     private:
         Ui::WelcomePage *ui;
+        void onNext() const;
     };
 } // ObsidianInstaller
 

@@ -1,9 +1,9 @@
 #include "ui/installerwindow.h"
 #include "ui_InstallerWindow.h"
+#include "ui/pages/tospage.h"
 #include <QFile>
 #include <QFontDatabase>
 #include <QMouseEvent>
-#include <QMessageBox>
 
 namespace ObsidianInstaller {
     InstallerWindow::InstallerWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::InstallerWindow) {
@@ -29,20 +29,6 @@ namespace ObsidianInstaller {
     }
 
     int InstallerWindow::getPage() const {
-        if (!ui) {
-            qDebug() << "UI is null";
-            return 0;
-        }
-        if (!ui->stackedWidget) {
-            qDebug() << "Stacked widget is null";
-            return 0;
-        }
-
-        if (ui->stackedWidget->currentIndex() < 0) {
-            qDebug() << "Current index is less than 0";
-            return 0;
-        }
-
         return ui->stackedWidget->currentIndex();
     }
 
@@ -54,6 +40,7 @@ namespace ObsidianInstaller {
     void InstallerWindow::decrementPage() const {
         setPage(getPage() - 1);
     }
+
 
     void InstallerWindow::mousePressEvent(QMouseEvent *event) {
         QMainWindow::mousePressEvent(event);

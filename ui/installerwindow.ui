@@ -98,7 +98,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="titlebar_title">
          <property name="font">
           <font>
            <family>Minecraft Seven v2</family>
@@ -167,10 +167,11 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="WelcomePage" name="page_1"/>
       <widget class="TOSPage" name="page_2"/>
+      <widget class="SetupPage" name="page_3"/>
      </widget>
     </item>
    </layout>
@@ -187,6 +188,12 @@
    <class>TOSPage</class>
    <extends>QWidget</extends>
    <header>ui/pages/tospage.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SetupPage</class>
+   <extends>QWidget</extends>
+   <header>ui/pages/setuppage.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

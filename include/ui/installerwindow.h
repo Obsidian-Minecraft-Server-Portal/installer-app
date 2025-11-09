@@ -4,6 +4,8 @@
 #define OBISIAN_INSTALLER_INSTALLERWINDOW_H
 
 #include <QMainWindow>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 namespace ObsidianInstaller {
     QT_BEGIN_NAMESPACE

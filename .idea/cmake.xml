@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeSharedSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug-MinGW (Qt)" ENABLED="true" GENERATION_DIR="bin/obj/debug" CONFIG_NAME="Debug" TOOLCHAIN_NAME="MinGW (Qt)" GENERATION_OPTIONS="-DPROFILE_NAME=debug -DCMAKE_PREFIX_PATH=F:\sdks\Qt\6.9.3\mingw_static_install" />
+      <configuration PROFILE_NAME="Release-MinGW (Qt)" ENABLED="true" GENERATION_DIR="bin/obj/release" CONFIG_NAME="Release" TOOLCHAIN_NAME="MinGW (Qt)" GENERATION_OPTIONS="-DPROFILE_NAME=release -DREMOVE_DEBUG_INFO=ON -DSTRIPPED_VERSION=ON -DCMAKE_PREFIX_PATH=F:\sdks\Qt\6.9.3\mingw_static_install" />
+    </configurations>
+  </component>
+</project>

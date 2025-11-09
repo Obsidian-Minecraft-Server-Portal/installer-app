@@ -1,0 +1,13 @@
+<RCC>
+  <qresource prefix="styles">
+    <file>base.qss</file>
+  </qresource>
+  <qresource prefix="images">
+    <file>icon.png</file>
+    <file>icon.ico</file>
+  </qresource>
+  <qresource prefix="fonts">
+    <file>Minecraft-Tenv2.ttf</file>
+    <file>Minecraft-Seven_v2.ttf</file>
+  </qresource>
+</RCC>

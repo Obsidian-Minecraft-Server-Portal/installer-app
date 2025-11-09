@@ -61,7 +61,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="textEdit"/>
+      <widget class="MarkdownRenderer" name="textEdit"/>
      </item>
      <item>
       <widget class="QCheckBox" name="checkBox">
@@ -156,6 +156,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MarkdownRenderer</class>
+   <extends>QTextBrowser</extends>
+   <header>ui/components/markdownrenderer.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

@@ -4,6 +4,8 @@
 #define OBSIDIAN_INSTALLER_TOSPAGE_H
 
 #include "ui_TOSPage.h"
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 namespace ObsidianInstaller {
     QT_BEGIN_NAMESPACE
@@ -24,8 +26,12 @@ namespace ObsidianInstaller {
 
     private:
         Ui::TOSPage *ui;
+        QNetworkAccessManager *networkManager;
+
         void onBack() const;
         void onNext() const;
+        void loadTermsOfService();
+        void onTermsLoaded(QNetworkReply *reply);
     };
 } // ObsidianInstaller
 

@@ -31,13 +31,21 @@ QMainWindow {
     color: #fff;
 }
 
-QPushButton{
+QPushButton[isPrimary=true]{
     background-color: #1bd96a;
     color: #000;
+}
+QPushButton[isPrimary=true]:hover{
+    background-color: #23E574;
+}
+
+QPushButton{
+    background-color: #1a1a1d;
+    color: #fff;
     border-radius: 0px;
     padding: 10px 20px;
 }
 
 QPushButton:hover{
-    background-color: #23E574;
+    background-color: #252528;
 }

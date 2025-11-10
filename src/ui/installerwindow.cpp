@@ -17,7 +17,6 @@ namespace ObsidianInstaller {
 #ifdef Q_OS_WIN
         connect(ui->closeButton, &QPushButton::clicked, this, &InstallerWindow::close);
 #endif
-        setPage(0);
     }
 
     InstallerWindow::~InstallerWindow() {

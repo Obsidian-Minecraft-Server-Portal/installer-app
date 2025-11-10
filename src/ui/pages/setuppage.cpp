@@ -15,7 +15,10 @@ namespace ObsidianInstaller {
 #elifdef Q_OS_LINUX
         this->installPath = QString("/opt/obsidian-server-panel");
 #endif
-            this->ui->browseInstallPathInput->setText(this->installPath);
+        this->ui->browseInstallPathInput->setText(this->installPath);
+        this->ui->releaseChannelSelector->addItem("Release (Stable) - Not Available");
+        this->ui->releaseChannelSelector->addItem("Beta - Not Available");
+        this->ui->releaseChannelSelector->addItem("Alpha (Pre-Release) - Not Available");
     }
 
     SetupPage::~SetupPage() {

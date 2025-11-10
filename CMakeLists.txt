@@ -46,10 +46,11 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
         AUTOUIC ON
         AUTOUIC_SEARCH_PATHS "${PROJECT_SOURCE_DIR}/ui"
 )
+
+# Configure Qt FIRST - this finds Qt6::Core and all other Qt targets
 configure_qt_static_target(${CMAKE_PROJECT_NAME}
         Widgets
         Gui
         Network
 )
-
 install_dependencies()

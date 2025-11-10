@@ -67,8 +67,9 @@ function(configure_qt_static_target TARGET_NAME)
     set_property(TARGET ${TARGET_NAME} PROPERTY AUTOUIC ON)
 
     # Enable "tree shaking" via Link-Time Optimization (LTO)
-    message(STATUS "  - Enabling Link-Time Optimization (LTO).")
-    set_property(TARGET ${TARGET_NAME} PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)
+    # Disabled due to GCC 13.1.0 ICE with std::function
+#     message(STATUS "  - Enabling Link-Time Optimization (LTO).")
+#     set_property(TARGET ${TARGET_NAME} PROPERTY INTERPROCEDURAL_OPTIMIZATION TRUE)
 
     # --- 5. Set Compiler and Linker Flags using Generator Expressions ---
     # Apply compiler flags for Release builds to optimize for size

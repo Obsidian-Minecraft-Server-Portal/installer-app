@@ -29,11 +29,6 @@ namespace ObsidianInstaller {
         QString installPath;
         Ui::SetupPage *ui;
 
-        void onNext() const;
-
-        void onBack() const;
-
-        void onBrowse();
 
         void refresh();
 
@@ -41,6 +36,12 @@ namespace ObsidianInstaller {
         void releasesLoaded(std::vector<Release> releases);
 
     private slots:
+        void onNext() const;
+
+        void onBack() const;
+
+        void onBrowse();
+
         void onReleasesLoaded(const std::vector<Release> &releases);
     };
 } // ObsidianInstaller

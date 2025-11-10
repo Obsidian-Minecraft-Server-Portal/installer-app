@@ -19,6 +19,41 @@ namespace ObsidianInstaller {
         this->ui->releaseChannelSelector->addItem("Release (Stable) - Not Available");
         this->ui->releaseChannelSelector->addItem("Beta - Not Available");
         this->ui->releaseChannelSelector->addItem("Alpha (Pre-Release) - Not Available");
+        GitHub::getReleases([this](const std::vector<Release> &releases, const bool success) {
+            this->ui->releaseChannelSelector->clear();
+            if (success) {
+                this->release = releases;
+                bool hasRelease = false;
+                bool hasBeta = false;
+                bool hasAlpha = false;
+                for (const auto &item: releases) {
+                    if (hasRelease && hasBeta && hasAlpha)break;
+                    if (item.type == GitHubReleaseType::RELEASE) {
+                        this->ui->releaseChannelSelector->addItem(std::format("Release (Stable) - {}", item.version).data());
+                        hasRelease = true;
+                    } else if (item.type == GitHubReleaseType::BETA) {
+                        this->ui->releaseChannelSelector->addItem(std::format("Beta - {}", item.version).data());
+                        hasBeta = true;
+                    } else if (item.type == GitHubReleaseType::ALPHA) {
+                        this->ui->releaseChannelSelector->addItem(std::format("Alpha (Pre-Release) - {}", item.version).data());
+                        hasAlpha = true;
+                    }
+                }
+                if (!hasRelease) {
+                    this->ui->releaseChannelSelector->addItem("Release (Stable) - Not Available");
+                }
+                if (!hasBeta) {
+                    this->ui->releaseChannelSelector->addItem("Beta - Not Available");
+                }
+                if (!hasAlpha) {
+                    this->ui->releaseChannelSelector->addItem("Alpha (Pre-Release) - Not Available");
+                }
+            } else {
+                this->ui->releaseChannelSelector->addItem("Release (Stable) - Not Available");
+                this->ui->releaseChannelSelector->addItem("Beta - Not Available");
+                this->ui->releaseChannelSelector->addItem("Alpha (Pre-Release) - Not Available");
+            }
+        });
     }
 
     SetupPage::~SetupPage() {

@@ -5,13 +5,13 @@
 
 #include <QWidget>
 
+#include "git_hub.h"
+
 namespace ObsidianInstaller {
     QT_BEGIN_NAMESPACE
-
     namespace Ui {
         class SetupPage;
     }
-
     QT_END_NAMESPACE
 
     class SetupPage : public QWidget {
@@ -23,11 +23,13 @@ namespace ObsidianInstaller {
         ~SetupPage() override;
 
     private:
+        std::vector<Release> release;
         QString installPath;
         Ui::SetupPage *ui;
         void onNext() const;
         void onBack() const;
         void onBrowse();
+
 
     };
 } // ObsidianInstaller

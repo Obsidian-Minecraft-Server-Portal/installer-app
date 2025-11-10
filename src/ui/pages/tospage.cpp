@@ -24,7 +24,7 @@ namespace ObsidianInstaller {
         reinterpret_cast<InstallerWindow *>(window())->incrementPage();
     }
 
-    void TOSPage::onCheckBoxStateChanged(int state) {
+    void TOSPage::onCheckBoxStateChanged(const int state) const {
         ui->nextButton->setDisabled(state != Qt::Checked);
     }
 } // ObsidianInstaller

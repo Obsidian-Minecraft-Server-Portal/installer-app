@@ -8,80 +8,76 @@
 namespace ObsidianInstaller {
     using json = nlohmann::json;
 
-    void GitHub::getReleases(std::function<void(std::vector<Release>, bool success)> callback) {
-        // Create manager on the heap so it persists after function returns
+    std::vector<Release> GitHub::getReleases() {
+        std::vector<Release> releases;
+
+        // Create manager
         auto *manager = new QNetworkAccessManager();
-        
+
         QNetworkRequest request(QUrl(R"(https://api.github.com/repos/Obsidian-Minecraft-Server-Portal/obsidian-server-panel/releases)"));
         request.setHeader(QNetworkRequest::UserAgentHeader, "Obsidian-Installer");
         request.setRawHeader("Accept", "application/vnd.github+json");
 
+        // Make synchronous request
         QNetworkReply *reply = manager->get(request);
 
+        // Create an event loop to wait for a response
+        QEventLoop loop;
+        QObject::connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
+
         // Setup timeout
-        auto *timeout = new QTimer(reply);
-        timeout->setSingleShot(true);
-        timeout->setInterval(10000); // 10-second timeout
-        
-        // Handle timeout
-        QObject::connect(timeout, &QTimer::timeout, reply, [reply, callback]() {
+        QTimer timer;
+        timer.setSingleShot(true);
+        timer.setInterval(10000); // 10-second timeout
+        QObject::connect(&timer, &QTimer::timeout, &loop, [&loop, reply]() {
             printf("Request timed out\n");
             reply->abort();
-            callback({}, false);
+            loop.quit();
         });
-        
-        // Handle successful completion
-        QObject::connect(reply, &QNetworkReply::finished, [reply, manager, timeout, callback]() {
-            timeout->stop();
-            
-            std::vector<Release> releases;
-            
-            // Check for errors
-            if (reply->error() != QNetworkReply::NoError) {
-                printf("Network error: %s\n", reply->errorString().toStdString().c_str());
-                reply->deleteLater();
-                manager->deleteLater();
-                callback(releases, false);
-                return;
-            }
-            
-            const auto data = reply->readAll();
-            printf("Received %zu bytes of data\n", data.size());
-            
-            if (data.isEmpty()) {
-                printf("No data received\n");
-                reply->deleteLater();
-                manager->deleteLater();
-                callback(releases, false);
-                return;
-            }
 
-            try {
-                for (json jsonData = json::parse(data.data()); const auto &release: jsonData) {
-                    Release r;
-                    r.version = release["tag_name"].get<std::string>();
-                    r.type = getReleaseType(r.version);
-                    for (const auto &asset: release["assets"]) {
-                        ReleaseArtifact a;
-                        a.name = asset["name"].get<std::string>();
-                        a.os = getOSVersion(a.name);
-                        a.url = asset["browser_download_url"].get<std::string>();
-                        r.artifacts.push_back(a);
-                    }
-                    releases.push_back(r);
-                }
-                
-                callback(releases, true);
-            } catch (const json::exception &e) {
-                printf("JSON parse error: %s\n", e.what());
-                callback(releases, false);
-            }
-            
+        timer.start();
+        loop.exec(); // Wait for the request to complete or timeout
+
+        // Check for errors
+        if (reply->error() != QNetworkReply::NoError) {
+            printf("Network error: %s\n", reply->errorString().toStdString().c_str());
             reply->deleteLater();
             manager->deleteLater();
-        });
-        
-        timeout->start();
+            return releases;
+        }
+
+        const auto data = reply->readAll();
+        printf("Received %zu bytes of data\n", data.size());
+
+        if (data.isEmpty()) {
+            printf("No data received\n");
+            reply->deleteLater();
+            manager->deleteLater();
+            return releases;
+        }
+
+        try {
+            for (json jsonData = json::parse(data.data()); const auto &release: jsonData) {
+                Release r;
+                r.version = release["tag_name"].get<std::string>();
+                r.type = getReleaseType(r.version);
+                for (const auto &asset: release["assets"]) {
+                    ReleaseArtifact a;
+                    a.name = asset["name"].get<std::string>();
+                    a.os = getOSVersion(a.name);
+                    a.url = asset["browser_download_url"].get<std::string>();
+                    r.artifacts.push_back(a);
+                }
+                releases.push_back(r);
+            }
+        } catch (const json::exception &e) {
+            printf("JSON parse error: %s\n", e.what());
+        }
+
+        // Cleans the memory after the event loop exits.
+        reply->deleteLater();
+        manager->deleteLater();
+        return releases;
     }
 
     GitHubReleaseType GitHub::getReleaseType(const std::string &tag) {

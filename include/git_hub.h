@@ -30,7 +30,7 @@ namespace ObsidianInstaller {
 
     class GitHub {
     public:
-        static void getReleases(std::function<void(std::vector<Release>, bool success)> callback);
+        static std::vector<Release> getReleases();
     private:
         static GitHubReleaseType getReleaseType(const std::string &tag);
 

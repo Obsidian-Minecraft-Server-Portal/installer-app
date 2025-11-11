@@ -80,7 +80,7 @@ function(configure_qt_static_target TARGET_NAME)
     # Apply linker flags for static linking and stripping symbols in Release
     target_link_libraries(${TARGET_NAME} PRIVATE
         $<$<CONFIG:Release>:-static -s>
-        $<$<CONFIG:Debug>:-static>
+        $<$<CONFIG:Debug>:-static-libgcc -static-libstdc++>
     )
 
     message(STATUS "Configuration for ${TARGET_NAME} complete.")

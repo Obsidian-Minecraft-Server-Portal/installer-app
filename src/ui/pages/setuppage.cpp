@@ -2,7 +2,7 @@
 #include "ui_SetupPage.h"
 #include "ui/installerwindow.h"
 #include <QFileDialog>
-#include <QtConcurrent/QtConcurrent>
+#include <QThreadPool>
 
 namespace ObsidianInstaller {
     SetupPage::SetupPage(QWidget *parent) : QWidget(parent), ui(new Ui::SetupPage) {
@@ -12,6 +12,7 @@ namespace ObsidianInstaller {
         connect(ui->nextButton, &QPushButton::clicked, this, &SetupPage::onNext);
         connect(ui->browseInstallationPathButton, &QPushButton::clicked, this, &SetupPage::onBrowse);
         connect(this, &SetupPage::releasesLoaded, this, &SetupPage::onReleasesLoaded);
+        connect(ui->releaseChannelSelector, &QComboBox::currentIndexChanged, this, &SetupPage::onReleaseSelected);
 #ifdef Q_OS_WIN
         this->installPath = QString("C:\\Program Files\\Obsidian Minecraft Server Panel");
 #elifdef Q_OS_LINUX
@@ -52,6 +53,48 @@ namespace ObsidianInstaller {
         }
     }
 
+    void SetupPage::onReleaseSelected(const int index) const {
+        switch (index) {
+            case 0:
+                if (hasRelease) {
+                    this->ui->releaseChannelMessage->setText("The release channel is the most stable channel, this is the recommended channel for most users.");
+                    this->ui->releaseChannelMessage->setStyleSheet("color: #a0a0a0;");
+                    this->ui->nextButton->setDisabled(false);
+                } else {
+                    this->ui->releaseChannelMessage->setText("Release channel not available - select another channel");
+                    this->ui->releaseChannelMessage->setStyleSheet("color: #ff4444;");
+                    this->ui->nextButton->setDisabled(true);
+                }
+                break;
+            case 1:
+                if (hasBeta) {
+                    this->ui->releaseChannelMessage->setText("The beta channel could be unstable, use this channel if you want to try out new features.");
+                    this->ui->releaseChannelMessage->setStyleSheet("color: #a0a0a0;");
+                    this->ui->nextButton->setDisabled(false);
+                } else {
+                    this->ui->releaseChannelMessage->setText("Beta channel not available - select another channel");
+                    this->ui->releaseChannelMessage->setStyleSheet("color: #ff4444;");
+                    this->ui->nextButton->setDisabled(true);
+                }
+                break;
+            case 2:
+                if (hasAlpha) {
+                    this->ui->releaseChannelMessage->setText("The alpha channel is unstable, use this channel if you want to try out new features.");
+                    this->ui->releaseChannelMessage->setStyleSheet("color: #a0a0a0;");
+                    this->ui->nextButton->setDisabled(false);
+                } else {
+                    this->ui->releaseChannelMessage->setText("Alpha channel not available - select another channel");
+                    this->ui->releaseChannelMessage->setStyleSheet("color: #ff4444;");
+                    this->ui->nextButton->setDisabled(true);
+                }
+            default:
+                this->ui->releaseChannelMessage->setText("Unkown error occurred - please try again later.");
+                this->ui->releaseChannelMessage->setStyleSheet("color: #ff4444;");
+                this->ui->nextButton->setDisabled(true);
+                break;
+        }
+    }
+
     void SetupPage::refresh() {
         this->ui->releaseChannelSelector->clear();
         this->ui->releaseChannelSelector->addItem("Release (Stable) - Loading...");
@@ -69,9 +112,9 @@ namespace ObsidianInstaller {
     void SetupPage::onReleasesLoaded(const std::vector<Release> &releases) {
         this->ui->releaseChannelSelector->clear();
         this->release = releases;
-        bool hasRelease = false;
-        bool hasBeta = false;
-        bool hasAlpha = false;
+        hasRelease = false;
+        hasBeta = false;
+        hasAlpha = false;
         QString releaseLabel("Release (Stable) - Not Available");
         QString betaLabel("Beta - Not Available");
         QString alphaLabel("Alpha (Pre-Release) - Not Available");

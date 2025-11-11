@@ -25,6 +25,9 @@ namespace ObsidianInstaller {
         ~SetupPage() override;
 
     private:
+        bool hasRelease = false;
+        bool hasBeta = false;
+        bool hasAlpha = false;
         std::vector<Release> release;
         QString installPath;
         Ui::SetupPage *ui;
@@ -41,6 +44,7 @@ namespace ObsidianInstaller {
         void onBack() const;
 
         void onBrowse();
+        void onReleaseSelected(const int index) const;
 
         void onReleasesLoaded(const std::vector<Release> &releases);
     };

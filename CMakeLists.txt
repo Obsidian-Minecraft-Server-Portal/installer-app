@@ -3,7 +3,7 @@ project(obsidian_installer)
 include(cmake/QtStaticHelpers.cmake)
 include(cmake/vendors.cmake)
 
-set(CMAKE_CXX_STANDARD 26)
+set(CMAKE_CXX_STANDARD 20)
 
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 file(GLOB_RECURSE HEADERS "include/*.h")

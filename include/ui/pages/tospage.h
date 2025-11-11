@@ -25,7 +25,7 @@ namespace ObsidianInstaller {
         Ui::TOSPage *ui;
         void onBack() const;
         void onNext() const;
-        void onCheckBoxStateChanged(int state) const;
+        void onCheckBoxStateChanged(Qt::CheckState state) const;
     };
 } // ObsidianInstaller
 

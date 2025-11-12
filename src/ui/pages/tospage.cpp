@@ -2,6 +2,9 @@
 #include "logger.h"
 #include <ui/installerwindow.h>
 #include <format>
+#include <QTextBrowser>
+#include <QWheelEvent>
+#include <QKeyEvent>
 
 namespace ObsidianInstaller {
     TOSPage::TOSPage(QWidget *parent) : QWidget(parent), ui(new Ui::TOSPage)  {

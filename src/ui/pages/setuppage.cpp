@@ -6,6 +6,8 @@
 #include <QThreadPool>
 #include <format>
 
+#include "installer.h"
+
 namespace ObsidianInstaller {
     SetupPage::SetupPage(QWidget *parent) : QWidget(parent), ui(new Ui::SetupPage) {
         LOG_INFO("Initializing SetupPage");
@@ -36,6 +38,7 @@ namespace ObsidianInstaller {
     }
 
     void SetupPage::onNext() const {
+        Installer::LaunchProcess(std::format("\"mkdir={}\"", this->installPath.toStdString().c_str()).c_str());
         LOG_INFO(std::format("User clicked 'Next' on SetupPage, install path: {}", this->installPath.toStdString()));
         reinterpret_cast<InstallerWindow *>(window())->incrementPage();
     }
@@ -61,7 +64,7 @@ namespace ObsidianInstaller {
         dialog.setLabelText(QFileDialog::Accept, tr("Select"));
 
         if (dialog.exec() == QDialog::Accepted) {
-            const auto path = dialog.selectedFiles().first();
+            const auto path = dialog.selectedFiles().first().append("/Obsidian Minecraft Server Panel");
             LOG_INFO(std::format("User selected installation path: {}", path.toStdString()));
             this->installPath = path;
             this->ui->browseInstallPathInput->setText(path);

@@ -32,141 +32,395 @@
       <number>10</number>
      </property>
      <item>
-      <widget class="QTextBrowser" name="textBrowser">
+      <widget class="OTextBrowser" name="textBrowser">
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: #0f1319;
 color: #fff;</string>
        </property>
+       <property name="markdown">
+        <string notr="true"># Terms of Service
+
+**Last updated:** August 8, 2025
+
+## 1\. Acceptance of Terms
+
+By downloading, installing, or using the Obsidian Minecraft Server Panel (&quot;the
+Software&quot;), you agree to be bound by these Terms of Service (&quot;Terms&quot;). If you
+do not agree to these Terms, please do not download, install, or use the
+Software.
+
+## 2\. Description of Software
+
+Obsidian Minecraft Server Panel is a self-hosted, locally-run application that
+allows users to:
+
+- Manage Minecraft servers through a web interface on their own computer
+- Configure Forge, Fabric, Quilt, and NeoForge versions and server settings
+  locally
+- Browse and install mods from Modrinth and CurseForge
+- Monitor server performance and status on their own hardware
+- Manage user authentication and access controls locally
+
+**Important:** This software runs entirely on your computer. We do not host,
+store, or have access to any of your data, server configurations, or personal
+information.
+
+## 3\. License and Usage Rights
+
+This software is provided under the Obsidian Private License with the following
+terms:
+
+### 3.1 Permitted Uses
+
+- Private, non-commercial use for personal Minecraft servers
+- Personal experimentation and modification of the source code
+- Sharing with friends and family for personal use
+- Running on your own hardware for personal purposes
+- Local hosting and self-deployment
+
+### 3.2 Prohibited Uses
+
+You may NOT:
+
+- Sell access to or distribute this software for profit
+- Use this software in commercial services where others pay for access
+- Incorporate this software into commercial products or services
+- Rent, lease, or provide the software as a service for compensation
+- Remove or alter licensing information
+
+## 4\. Self-Hosted Nature
+
+### 4.1 Local Installation
+
+- The Software runs entirely on your local computer
+- All data is stored locally using SQLite database
+- No data is transmitted to or stored on our servers
+- You have complete control over your data and configurations
+
+### 4.2 No Remote Access
+
+- We do not have access to your installation or data
+- No telemetry or usage data is collected or transmitted
+- All authentication and user management occurs locally
+
+## 5\. User Responsibilities
+
+### 5.1 System Requirements and Security
+
+- You are responsible for maintaining your system's security
+- You must ensure your computer meets the software requirements
+- You are responsible for backing up your local data
+- You must secure your local installation from unauthorized access
+
+### 5.2 Proper Use
+
+- You agree to use the Software only for lawful purposes
+- You are responsible for all activities on your local installation
+- You must comply with Minecraft's End User License Agreement (EULA)
+- You are responsible for any data loss or server issues
+
+### 5.3 Third-Party API Usage
+
+- You agree to comply with the terms of service of all third-party APIs used by
+  the Software
+- You are responsible for any API rate limits or usage restrictions
+- Misuse of third-party APIs through the Software is your responsibility
+
+### 5.4 Network and Port Management
+
+- You are responsible for configuring network settings and port forwarding
+- UPnP features are optional and under your control
+- Network security is your responsibility
+
+## 6\. Data Ownership and Control
+
+### 6.1 Your Data
+
+- You retain complete ownership of all your data and configurations
+- All server files, user accounts, and settings remain on your computer
+- We have no access to or control over your local data
+
+### 6.2 Local Database
+
+- The Software uses a local SQLite database stored on your computer
+- You are responsible for database maintenance and backups
+- No database information is shared with us or third parties
+
+## 7\. Software Distribution and Updates
+
+### 7.1 Distribution
+
+- The Software is distributed as source code and compiled binaries
+- You download and install the Software on your own systems
+- No ongoing connection to our servers is required for operation
+
+### 7.2 Updates
+
+- Updates are provided through public repositories
+- You choose when and how to update your installation
+- No automatic data collection occurs during updates
+
+## 8\. External Dependencies and APIs
+
+### 8.1 Minecraft Ecosystem APIs
+
+The Software communicates with the following external APIs to provide
+functionality:
+
+- **Minecraft API**: For official Minecraft version information
+- **Minecraft Forge API**: For Forge version data and downloads
+- **Fabric API**: For Fabric loader and mod information
+- **Quilt API**: For Quilt loader and ecosystem data
+- **NeoForge API**: For NeoForge version and compatibility information
+- **Modrinth API**: For mod browsing, downloading, and metadata
+- **CurseForge API**: For mod and modpack information and downloads
+
+### 8.2 API Usage Terms
+
+- All external API communications are limited to publicly available data
+- No personal information is transmitted to these services
+- You must comply with each service's terms of use and API guidelines
+- Rate limiting and usage restrictions apply as defined by each service
+
+### 8.3 Third-Party Content
+
+- Mods and content downloaded through the Software are subject to their
+  respective licenses
+- You are responsible for compliance with mod and content creator terms
+- The Software facilitates access but does not host third-party content
+
+## 9\. Disclaimers and Limitations
+
+### 9.1 Warranty Disclaimer
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot; WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+### 9.2 Third-Party Service Availability
+
+WE DO NOT GUARANTEE THE AVAILABILITY OR FUNCTIONALITY OF THIRD-PARTY APIS AND
+SERVICES. SERVICE INTERRUPTIONS OR API CHANGES MAY AFFECT SOFTWARE
+FUNCTIONALITY.
+
+### 9.3 Limitation of Liability
+
+IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF
+PROFITS, DATA, USE, OR GOODWILL.
+
+### 9.4 Self-Hosted Disclaimer
+
+SINCE THE SOFTWARE RUNS ENTIRELY ON YOUR COMPUTER, WE CANNOT BE HELD
+RESPONSIBLE FOR LOCAL SYSTEM ISSUES, DATA LOSS, SECURITY BREACHES, OR
+PERFORMANCE PROBLEMS.
+
+## 10\. Support and Maintenance
+
+### 10.1 Community Support
+
+- Support is provided through community channels and documentation
+- We do not provide guaranteed support for individual installations
+- Support is provided on a best-effort basis
+
+### 10.2 No Service Level Agreements
+
+- Since this is self-hosted software, no uptime or performance guarantees apply
+- You are responsible for maintaining your own installation
+- Third-party API availability is beyond our control
+
+## 11\. Termination
+
+- You may stop using the Software at any time by uninstalling it
+- These Terms continue to apply to any retained copies of the Software
+- No account termination is necessary since no accounts are maintained on our
+  servers
+
+## 12\. Changes to Terms
+
+We reserve the right to modify these Terms at any time. Changes will be
+communicated through:
+
+- Updates to the repository documentation
+- Release notes for new versions
+- Project announcement channels
+
+## 13\. Governing Law
+
+These Terms are governed by the laws of your local jurisdiction, without regard
+to conflict of law principles.
+
+## 14\. Contact Information
+
+For questions about these Terms, please contact us through the project's
+official GitHub repository or community channels.
+
+- - -
+*This software is self-hosted and runs entirely on your computer. We do not
+collect, store, or have access to any of your data. External API communications
+are limited to publicly available information.*
+
+</string>
+       </property>
        <property name="html">
         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;title&gt;terms-of-service&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;h1 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;terms-of-service&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:xx-large; font-weight:700;&quot;&gt;T&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:xx-large; font-weight:700;&quot;&gt;erms of Service &lt;/span&gt;&lt;/h1&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;Last updated:&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt; August 8, 2025 &lt;/span&gt;&lt;/p&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;acceptance-of-terms&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. Acceptance of Terms &lt;/span&gt;&lt;/h2&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;By downloading, installing, or using the Obsidian Minecraft Server Panel (“the Software”), you agree to be bound by these Terms of Service (“Terms”). If you do not agree to these Terms, please do not download, install, or use the Software. &lt;/span&gt;&lt;/p&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;description-of-software&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. Description of Software &lt;/span&gt;&lt;/h2&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;Obsidian Minecraft Server Panel is a self-hosted, locally-run application that allows users to: - Manage Minecraft servers through a web interface on their own computer - Configure Forge, Fabric, Quilt, and NeoForge versions and server settings locally - Browse and install mods from Modrinth and CurseForge - Monitor server performance and status on their own hardware - Manage user authentication and access controls locally &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;Important:&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt; This software runs entirely on your computer. We do not host, store, or have access to any of your data, server configurations, or personal information. &lt;/span&gt;&lt;/p&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;license-and-usage-rights&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. License and Usage Rights &lt;/span&gt;&lt;/h2&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;This software is provided under the Obsidian Private License with the following terms: &lt;/span&gt;&lt;/p&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;permitted-uses&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.1 Permitted Uses &lt;/span&gt;&lt;/h3&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Segoe UI'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;h1 style=&quot; margin-top:18px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;Terms of Service&lt;/span&gt;&lt;/h1&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;Last updated:&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; August 8, 2025&lt;/span&gt;&lt;/p&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;1. Acceptance of Terms&lt;/span&gt;&lt;/h2&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;By downloading, installing, or using the Obsidian Minecraft Server Panel (&amp;quot;the Software&amp;quot;), you agree to be bound by these Terms of Service (&amp;quot;Terms&amp;quot;). If you do not agree to these Terms, please do not download, install, or use the Software.&lt;/span&gt;&lt;/p&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;2. Description of Software&lt;/span&gt;&lt;/h2&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Obsidian Minecraft Server Panel is a self-hosted, locally-run application that allows users to:&lt;/span&gt;&lt;/p&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Private, non-commercial use for personal Minecraft servers &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Personal experimentation and modification of the source code &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sharing with friends and family for personal use &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Running on your own hardware for personal purposes &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Local hosting and self-deployment &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;prohibited-uses&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.2 Prohibited Uses &lt;/span&gt;&lt;/h3&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;You may NOT: - Sell access to or distribute this software for profit - Use this software in commercial services where others pay for access - Incorporate this software into commercial products or services - Rent, lease, or provide the software as a service for compensation - Remove or alter licensing information &lt;/span&gt;&lt;/p&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;self-hosted-nature&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;4&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. Self-Hosted Nature &lt;/span&gt;&lt;/h2&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;local-installation&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;4&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.1 Local Installation &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Manage Minecraft servers through a web interface on their own computer&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Configure Forge, Fabric, Quilt, and NeoForge versions and server settings locally&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Browse and install mods from Modrinth and CurseForge&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Monitor server performance and status on their own hardware&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Manage user authentication and access controls locally&lt;/li&gt;&lt;/ul&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;Important:&lt;/span&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; This software runs entirely on your computer. We do not host, store, or have access to any of your data, server configurations, or personal information.&lt;/span&gt;&lt;/p&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;3. License and Usage Rights&lt;/span&gt;&lt;/h2&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This software is provided under the Obsidian Private License with the following terms:&lt;/span&gt;&lt;/p&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;3.1 Permitted Uses&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Software runs entirely on your local computer &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All data is stored locally using SQLite database &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No data is transmitted to or stored on our servers &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You have complete control over your data and configurations &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;no-remote-access&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;4&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.2 No Remote Access &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Private, non-commercial use for personal Minecraft servers&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Personal experimentation and modification of the source code&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sharing with friends and family for personal use&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Running on your own hardware for personal purposes&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Local hosting and self-deployment&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;3.2 Prohibited Uses&lt;/span&gt;&lt;/h3&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;You may NOT:&lt;/span&gt;&lt;/p&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We do not have access to your installation or data &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No telemetry or usage data is collected or transmitted &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All authentication and user management occurs locally &lt;/li&gt;&lt;/ul&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;user-responsibilities&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. User Responsibilities &lt;/span&gt;&lt;/h2&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;system-requirements-and-security&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.1 System Requirements and Security &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sell access to or distribute this software for profit&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Use this software in commercial services where others pay for access&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Incorporate this software into commercial products or services&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Rent, lease, or provide the software as a service for compensation&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Remove or alter licensing information&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;4. Self-Hosted Nature&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;4.1 Local Installation&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for maintaining your system’s security &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must ensure your computer meets the software requirements &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for backing up your local data &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must secure your local installation from unauthorized access &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;proper-use&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.2 Proper Use &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Software runs entirely on your local computer&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All data is stored locally using SQLite database&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No data is transmitted to or stored on our servers&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You have complete control over your data and configurations&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;4.2 No Remote Access&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You agree to use the Software only for lawful purposes &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for all activities on your local installation &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must comply with Minecraft’s End User License Agreement (EULA) &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for any data loss or server issues &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;third-party-api-usage&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.3 Third-Party API Usage &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We do not have access to your installation or data&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No telemetry or usage data is collected or transmitted&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All authentication and user management occurs locally&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;5. User Responsibilities&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;5.1 System Requirements and Security&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You agree to comply with the terms of service of all third-party APIs used by the Software &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for any API rate limits or usage restrictions &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Misuse of third-party APIs through the Software is your responsibility &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;network-and-port-management&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;5&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.4 Network and Port Management &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for maintaining your system's security&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must ensure your computer meets the software requirements&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for backing up your local data&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must secure your local installation from unauthorized access&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;5.2 Proper Use&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for configuring network settings and port forwarding &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;UPnP features are optional and under your control &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Network security is your responsibility &lt;/li&gt;&lt;/ul&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;data-ownership-and-control&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;6&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. Data Ownership and Control &lt;/span&gt;&lt;/h2&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;your-data&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;6&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.1 Your Data &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You agree to use the Software only for lawful purposes&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for all activities on your local installation&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must comply with Minecraft's End User License Agreement (EULA)&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for any data loss or server issues&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;5.3 Third-Party API Usage&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You retain complete ownership of all your data and configurations &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All server files, user accounts, and settings remain on your computer &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We have no access to or control over your local data &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;local-database&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;6&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.2 Local Database &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You agree to comply with the terms of service of all third-party APIs used by the Software&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for any API rate limits or usage restrictions&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Misuse of third-party APIs through the Software is your responsibility&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;5.4 Network and Port Management&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Software uses a local SQLite database stored on your computer &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for database maintenance and backups &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No database information is shared with us or third parties &lt;/li&gt;&lt;/ul&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;software-distribution-and-updates&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;7&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. Software Distribution and Updates &lt;/span&gt;&lt;/h2&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;distribution&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;7&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.1 Distribution &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for configuring network settings and port forwarding&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;UPnP features are optional and under your control&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Network security is your responsibility&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;6. Data Ownership and Control&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;6.1 Your Data&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Software is distributed as source code and compiled binaries &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You download and install the Software on your own systems &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No ongoing connection to our servers is required for operation &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;updates&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;7&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.2 Updates &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You retain complete ownership of all your data and configurations&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All server files, user accounts, and settings remain on your computer&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We have no access to or control over your local data&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;6.2 Local Database&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Updates are provided through public repositories &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You choose when and how to update your installation &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No automatic data collection occurs during updates &lt;/li&gt;&lt;/ul&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;external-dependencies-and-apis&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;8&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. External Dependencies and APIs &lt;/span&gt;&lt;/h2&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;minecraft-ecosystem-apis&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;8&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.1 Minecraft Ecosystem APIs &lt;/span&gt;&lt;/h3&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;The Software communicates with the following external APIs to provide functionality: - &lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;Minecraft API&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;: For official Minecraft version information - &lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;Minecraft Forge API&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;: For Forge version data and downloads - &lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;Fabric API&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;: For Fabric loader and mod information - &lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;Quilt API&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;: For Quilt loader and ecosystem data - &lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;NeoForge API&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;: For NeoForge version and compatibility information - &lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;Modrinth API&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;: For mod browsing, downloading, and metadata - &lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-weight:700;&quot;&gt;CurseForge API&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;: For mod and modpack information and downloads &lt;/span&gt;&lt;/p&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;api-usage-terms&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;8&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.2 API Usage Terms &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Software uses a local SQLite database stored on your computer&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for database maintenance and backups&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No database information is shared with us or third parties&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;7. Software Distribution and Updates&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;7.1 Distribution&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All external API communications are limited to publicly available data &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No personal information is transmitted to these services &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must comply with each service’s terms of use and API guidelines &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Rate limiting and usage restrictions apply as defined by each service &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;third-party-content&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;8&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.3 Third-Party Content &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Software is distributed as source code and compiled binaries&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You download and install the Software on your own systems&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No ongoing connection to our servers is required for operation&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;7.2 Updates&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Mods and content downloaded through the Software are subject to their respective licenses &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for compliance with mod and content creator terms &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Software facilitates access but does not host third-party content &lt;/li&gt;&lt;/ul&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;disclaimers-and-limitations&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;. Disclaimers and Limitations &lt;/span&gt;&lt;/h2&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;warranty-disclaimer&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.1 Warranty Disclaimer &lt;/span&gt;&lt;/h3&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;THE SOFTWARE IS PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. &lt;/span&gt;&lt;/p&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;third-party-service-availability&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.2 Third-Party Service Availability &lt;/span&gt;&lt;/h3&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;WE DO NOT GUARANTEE THE AVAILABILITY OR FUNCTIONALITY OF THIRD-PARTY APIS AND SERVICES. SERVICE INTERRUPTIONS OR API CHANGES MAY AFFECT SOFTWARE FUNCTIONALITY. &lt;/span&gt;&lt;/p&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;limitation-of-liability&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.3 Limitation of Liability &lt;/span&gt;&lt;/h3&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, OR GOODWILL. &lt;/span&gt;&lt;/p&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;self-hosted-disclaimer&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;9&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;.4 Self-Hosted Disclaimer &lt;/span&gt;&lt;/h3&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;SINCE THE SOFTWARE RUNS ENTIRELY ON YOUR COMPUTER, WE CANNOT BE HELD RESPONSIBLE FOR LOCAL SYSTEM ISSUES, DATA LOSS, SECURITY BREACHES, OR PERFORMANCE PROBLEMS. &lt;/span&gt;&lt;/p&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;support-and-maintenance&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;0. Support and Maintenance &lt;/span&gt;&lt;/h2&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;community-support&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;0.1 Community Support &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Updates are provided through public repositories&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You choose when and how to update your installation&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No automatic data collection occurs during updates&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;8. External Dependencies and APIs&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;8.1 Minecraft Ecosystem APIs&lt;/span&gt;&lt;/h3&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;The Software communicates with the following external APIs to provide functionality:&lt;/span&gt;&lt;/p&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Support is provided through community channels and documentation &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We do not provide guaranteed support for individual installations &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Support is provided on a best-effort basis &lt;/li&gt;&lt;/ul&gt;
-&lt;h3 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;no-service-level-agreements&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:large; font-weight:700;&quot;&gt;0.2 No Service Level Agreements &lt;/span&gt;&lt;/h3&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Minecraft API&lt;/span&gt;: For official Minecraft version information&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Minecraft Forge API&lt;/span&gt;: For Forge version data and downloads&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Fabric API&lt;/span&gt;: For Fabric loader and mod information&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Quilt API&lt;/span&gt;: For Quilt loader and ecosystem data&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;NeoForge API&lt;/span&gt;: For NeoForge version and compatibility information&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Modrinth API&lt;/span&gt;: For mod browsing, downloading, and metadata&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;CurseForge API&lt;/span&gt;: For mod and modpack information and downloads&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;8.2 API Usage Terms&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Since this is self-hosted software, no uptime or performance guarantees apply &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for maintaining your own installation &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Third-party API availability is beyond our control &lt;/li&gt;&lt;/ul&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;termination&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;1. Termination &lt;/span&gt;&lt;/h2&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;All external API communications are limited to publicly available data&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No personal information is transmitted to these services&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You must comply with each service's terms of use and API guidelines&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Rate limiting and usage restrictions apply as defined by each service&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;8.3 Third-Party Content&lt;/span&gt;&lt;/h3&gt;
 &lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:11px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You may stop using the Software at any time by uninstalling it &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;These Terms continue to apply to any retained copies of the Software &lt;/li&gt;
-&lt;li style=&quot; font-family:'Minecraft Seven v2';&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No account termination is necessary since no accounts are maintained on our servers &lt;/li&gt;&lt;/ul&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;changes-to-terms&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;2. Changes to Terms &lt;/span&gt;&lt;/h2&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;We reserve the right to modify these Terms at any time. Changes will be communicated through: - Updates to the repository documentation - Release notes for new versions - Project announcement channels &lt;/span&gt;&lt;/p&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;governing-law&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;3. Governing Law &lt;/span&gt;&lt;/h2&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;These Terms are governed by the laws of your local jurisdiction, without regard to conflict of law principles. &lt;/span&gt;&lt;/p&gt;
-&lt;h2 style=&quot; margin-top:15px; margin-bottom:12px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a name=&quot;contact-information&quot;&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;1&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-size:x-large; font-weight:700;&quot;&gt;4. Contact Information &lt;/span&gt;&lt;/h2&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt;For questions about these Terms, please contact us through the project’s official GitHub repository or community channels. &lt;/span&gt;&lt;/p&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Mods and content downloaded through the Software are subject to their respective licenses&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for compliance with mod and content creator terms&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The Software facilitates access but does not host third-party content&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;9. Disclaimers and Limitations&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;9.1 Warranty Disclaimer&lt;/span&gt;&lt;/h3&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot; WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.&lt;/span&gt;&lt;/p&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;9.2 Third-Party Service Availability&lt;/span&gt;&lt;/h3&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;WE DO NOT GUARANTEE THE AVAILABILITY OR FUNCTIONALITY OF THIRD-PARTY APIS AND SERVICES. SERVICE INTERRUPTIONS OR API CHANGES MAY AFFECT SOFTWARE FUNCTIONALITY.&lt;/span&gt;&lt;/p&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;9.3 Limitation of Liability&lt;/span&gt;&lt;/h3&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;IN NO EVENT SHALL WE BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, OR GOODWILL.&lt;/span&gt;&lt;/p&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;9.4 Self-Hosted Disclaimer&lt;/span&gt;&lt;/h3&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;SINCE THE SOFTWARE RUNS ENTIRELY ON YOUR COMPUTER, WE CANNOT BE HELD RESPONSIBLE FOR LOCAL SYSTEM ISSUES, DATA LOSS, SECURITY BREACHES, OR PERFORMANCE PROBLEMS.&lt;/span&gt;&lt;/p&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;10. Support and Maintenance&lt;/span&gt;&lt;/h2&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;10.1 Community Support&lt;/span&gt;&lt;/h3&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Support is provided through community channels and documentation&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;We do not provide guaranteed support for individual installations&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Support is provided on a best-effort basis&lt;/li&gt;&lt;/ul&gt;
+&lt;h3 style=&quot; margin-top:14px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;10.2 No Service Level Agreements&lt;/span&gt;&lt;/h3&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Since this is self-hosted software, no uptime or performance guarantees apply&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You are responsible for maintaining your own installation&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Third-party API availability is beyond our control&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;11. Termination&lt;/span&gt;&lt;/h2&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You may stop using the Software at any time by uninstalling it&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;These Terms continue to apply to any retained copies of the Software&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;No account termination is necessary since no accounts are maintained on our servers&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;12. Changes to Terms&lt;/span&gt;&lt;/h2&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;We reserve the right to modify these Terms at any time. Changes will be communicated through:&lt;/span&gt;&lt;/p&gt;
+&lt;ul style=&quot;margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; -qt-list-indent: 1;&quot;&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:12px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Updates to the repository documentation&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Release notes for new versions&lt;/li&gt;
+&lt;li style=&quot; font-size:9pt;&quot; style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Project announcement channels&lt;/li&gt;&lt;/ul&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;13. Governing Law&lt;/span&gt;&lt;/h2&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;These Terms are governed by the laws of your local jurisdiction, without regard to conflict of law principles.&lt;/span&gt;&lt;/p&gt;
+&lt;h2 style=&quot; margin-top:16px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:700;&quot;&gt;14. Contact Information&lt;/span&gt;&lt;/h2&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;For questions about these Terms, please contact us through the project's official GitHub repository or community channels.&lt;/span&gt;&lt;/p&gt;
 &lt;hr /&gt;
-&lt;p style=&quot; margin-top:11px; margin-bottom:11px; margin-left:37px; margin-right:37px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2'; font-style:italic;&quot;&gt;This software is self-hosted and runs entirely on your computer. We do not collect, store, or have access to any of your data. External API communications are limited to publicly available information.&lt;/span&gt;&lt;span style=&quot; font-family:'Minecraft Seven v2';&quot;&gt; &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:9pt; font-style:italic;&quot;&gt;This software is self-hosted and runs entirely on your computer. We do not collect, store, or have access to any of your data. External API communications are limited to publicly available information.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
        </property>
       </widget>
      </item>
@@ -272,6 +526,13 @@ li.checked::marker { content: &quot;\2612&quot;; }
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>OTextBrowser</class>
+   <extends>QTextBrowser</extends>
+   <header>ui/OTextBrowser.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
